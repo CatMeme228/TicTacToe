@@ -14,7 +14,7 @@ class Field():
 myField= Field()
 myField.cells
 myField.print()
-for i in range(9):
+for i in range(10):
     if myField.cells[0] == myField.cells[1] == myField.cells[2] == '0' or myField.cells[0] == myField.cells[1] == myField.cells[2] == 'x':
         print(myField.cells[0], 'Wins')
         exit()
@@ -39,6 +39,9 @@ for i in range(9):
     elif myField.cells[2] == myField.cells[4] == myField.cells[6] == '0' or myField.cells[2] == myField.cells[4] == myField.cells[6] == 'x':
         print(myField.cells[1], 'Wins')
         exit()
+    elif i == 10:
+        print('No winer')
+
     else:
         inpSymbol = input()
         inpi = int(input())
