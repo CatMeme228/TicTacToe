@@ -8,7 +8,7 @@ class Field():
         print(self.cells[6], self.cells[7], self.cells[8])
 
     def setSymdol(self, symbol, i, j):
-        self.cells[i*3+j] = symbol
+        self.cells[j*3+i] = symbol
 
 
 myField= Field()
@@ -27,24 +27,24 @@ for i in range(10):
     elif myField.cells[0] == myField.cells[3] == myField.cells[6] == '0' or myField.cells[0] == myField.cells[3] == myField.cells[6] == 'x':
         print(myField.cells[0], 'Wins')
         exit()
-    elif myField.cells[1] == myField.cells[4] == myField.cells[8] == '0' or myField.cells[1] == myField.cells[4] == myField.cells[8] == 'x':
+    elif myField.cells[1] == myField.cells[4] == myField.cells[7] == '0' or myField.cells[1] == myField.cells[4] == myField.cells[7] == 'x':
         print(myField.cells[1], 'Wins')
         exit()
-    elif myField.cells[2] == myField.cells[5] == myField.cells[7] == '0' or myField.cells[2] == myField.cells[5] == myField.cells[7] == 'x':
+    elif myField.cells[2] == myField.cells[5] == myField.cells[8] == '0' or myField.cells[2] == myField.cells[5] == myField.cells[8] == 'x':
         print(myField.cells[2], 'Wins')
         exit()
     elif myField.cells[0] == myField.cells[4] == myField.cells[8] == '0' or myField.cells[0] == myField.cells[4] == myField.cells[8] == 'x':
         print(myField.cells[0], 'Wins')
         exit()
     elif myField.cells[2] == myField.cells[4] == myField.cells[6] == '0' or myField.cells[2] == myField.cells[4] == myField.cells[6] == 'x':
-        print(myField.cells[1], 'Wins')
+        print(myField.cells[2], 'Wins')
         exit()
-    elif i == 10:
+    elif i == 9:
         print('No winer')
 
     else:
         inpSymbol = input()
-        inpi = int(input())
         inpj = int(input())
-        myField.setSymdol(inpSymbol, inpi, inpj)
+        inpi = int(input())
+        myField.setSymdol(inpSymbol, inpi-1, inpj-1)
         myField.print()
