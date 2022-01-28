@@ -14,6 +14,8 @@ class Field():
 myField= Field()
 myField.cells
 myField.print()
+
+
 for i in range(10):
     if myField.cells[0] == myField.cells[1] == myField.cells[2] == '0' or myField.cells[0] == myField.cells[1] == myField.cells[2] == 'x':
         print(myField.cells[0], 'Wins')
