@@ -7,7 +7,7 @@ class Field():
         print(self.cells[3], self.cells[4], self.cells[5])
         print(self.cells[6], self.cells[7], self.cells[8])
 
-    def setSymdol(self, symbol, y, x):
+    def setSymbol(self, symbol, y, x):
         self.cells[x*3+y] = symbol
 
 
@@ -44,8 +44,12 @@ for i in range(10):
         print('Draw')
 
     else:
+        print("Enter symbol (x or 0):", end= " ")
         inp_Symbol = input()
+        print("Enter line number:", end=" ")
         inp_x = int(input())
+        print("Enter column number:", end=" ")
         inp_y = int(input())
-        myField.setSymdol(inp_Symbol, inp_y-1, inp_x-1)
+        myField.setSymbol(inp_Symbol, inp_y-1, inp_x-1)
+        print("\n")
         myField.print()
